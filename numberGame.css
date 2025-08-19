@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-size-large: 32px;
+  --font-size-medium: 20px;
+  --font-size-small: 18px;
+
+  --font-family-h1: "Segoe UI";
+  --font-family-text: "Arial";
+
+  --color-heading: #000;
+  --color-text: #676565;
+
+  --background-color: rgb(222, 125, 366, 12);
+  --background-color-frame: rgb(212, 12, 366, 12);
+  --background-color-padding: rgb(196, 300, 312, 5);
+}
+
+body {
+  display: inline-block;
+  align-items: center;
+  padding: 40px;
+  background-color: var(--background-color);
+  font-family: var(--font-family-h1);
+  font-size: var(--font-size-large);
+}
+
+p {
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-medium);
+  color: var(--color-text);
+  background-color: var(--background-color-padding);
+  max-width: 600px;
+  height: auto;
+  border: 10px solid var(--background-color-frame);
+}
+
+.number-input {
+  margin-top: 40px;
+  padding: 10px;
+  max-width: 150px;
+  border-radius: 4px;
+}
+
+.submit-guess {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 10px;
+  max-width: 150px;
+  border-radius: 4px;
+  cursor: pointer;
+}

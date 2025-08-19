@@ -1,0 +1,72 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --background-color: #ecf0f1;
+  --text-color: #2c3e50;
+  --dark-background-color: #34495e;
+  --light-text-color: #ecf0f1;
+
+  --space-between-x-large: 20px;
+  --space-between-large: 15px;
+  --space-between-medium: 10px;
+  --space-between-small: 5px;
+
+  --font-size-large: 1.5rem;
+  --font-size-medium: 1.2rem; 
+  --font-size-small: 1rem;
+  --font-size-x-small: 0.8rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 40px;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+  font-size: var(--font-size-large);
+}
+
+.text {
+  font-size: var(--font-size-medium);
+  line-height: 1.5;
+  margin: var(--space-between-medium) 0;
+  width: 10%;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button:focus {
+  outline: none;
+}
+
+input[name="card"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: var(--font-size-small);
+  transition: border-color 0.3s;
+}

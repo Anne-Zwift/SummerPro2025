@@ -1,0 +1,32 @@
+* {
+  margin: 10px;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+:root {
+--primary-color: #3a04dd;
+--secondary-color: #d08e9d;
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+p {
+  color: var(--secondary-color);
+}
+
+#box {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+#box > div {
+  height: 2em;
+  width: 2em;
+  background-color: var(--primary-color);
+
+}
