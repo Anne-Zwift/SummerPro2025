@@ -133,5 +133,3 @@ const rollAllDice = async () => {
 rollDiceBtn?.addEventListener("click", () => {
   rollAllDice();
 });
-
-

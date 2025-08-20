@@ -16,4 +16,3 @@ export const generateRandomNumber = () => {
 } 
 
 // Export the random number generator function
-export default generateRandomNumber;

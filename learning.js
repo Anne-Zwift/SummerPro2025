@@ -361,4 +361,3 @@ function createProduct(name, price) {
 console.log(createProduct);
 console.log(product);
 console.log("Display output:", product.display());
-
