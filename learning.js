@@ -401,3 +401,62 @@ function haveFun(activityName = "hiking", time = 3) {
 haveFun("biking", 1);
 haveFun();
 
+
+// arrow Functions =>
+
+let studentsList= (students) => 
+  console.log(students);
+
+studentsList(["A", "B", "C"]);
+
+let list = ["apple", "banana", "cherry"];
+list.map((item) => console.log(item));
+
+// arrow functions the old way
+
+/*let person = {
+  first: "Angie",
+  hobbies: ["bike", "hike", "ski"],
+  printHobbies: function() {
+    let _this = this;
+    this.hobbies.forEach(function (hobby) {
+      let string = `${_this.first} likes to ${hobby}`;
+      console.log(string);
+    });
+  }
+};
+
+person.printHobbies();*/
+
+// better approach with arrow function
+
+let person = {
+  first: "Angie",
+  hobbies: ["bike", "hike", "ski"],
+  printHobbies: function() {
+
+    this.hobbies.forEach((hobby) => {
+      let string = `${this.first} likes to ${hobby}`;
+      console.log(string);
+    });
+  }
+};
+
+person.printHobbies();
+
+// generators
+
+function* director() {
+  yield "Three";
+  yield "Two";
+  yield "One";
+  yield "Action!";
+}
+
+let countdown = director();
+
+console.log(countdown.next().value);
+console.log(countdown.next().value);
+console.log(countdown.next().value);
+console.log(countdown.next().value);
+console.log(countdown.next());
