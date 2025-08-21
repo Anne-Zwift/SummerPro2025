@@ -514,6 +514,8 @@ const spacePeople = () => {
   });
 };
 
-spacePeople().then((spaceData) => 
-  console.log(spaceData)
-);
+spacePeople()
+.then((spaceData) => console.log(spaceData))
+.catch((err) => console.error(new Error("Can't load people"), err));
+
+  
