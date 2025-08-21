@@ -364,3 +364,40 @@ console.log("Display output:", product.display());
 
 
 // .repeat()
+
+let yell = "woo!";
+
+let party = yell.repeat(20);
+console.log(party);
+
+let cat = {
+  meow(times) {
+    console.log("meow".repeat(times));
+  },
+  purr(times) {
+    console.log("purr".repeat(times));
+  },
+  snore(times) {
+    console.log("ZzZzZz".repeat(times));
+  }
+}
+
+cat.meow(3);
+cat.purr(5);
+cat.snore(8);
+
+// default Parameters
+
+function add(x = 2, y = 3) {
+  console.log(x + y);
+}
+
+add(6, 3);// this is overwriting the function
+
+function haveFun(activityName = "hiking", time = 3) {
+  console.log(`Today I will go ${activityName} for ${time} hour(s).`)
+}
+
+haveFun("biking", 1);
+haveFun();
+
