@@ -476,3 +476,44 @@ const formatText = (text, indentLevel = 1) => {
 }
 
 console.log(formatText(text, indentLevel));
+
+// promises async/ waiting is going on
+// a delay for something we ask for and when we receive it, fetching data
+
+/*const delay = (seconds) =>
+  new Promise((resolve, reject) => {
+    if (typeof seconds !== "number") {
+      return reject(new Error("seconds must be a number"));
+    }
+    setTimeout(resolve, seconds * 1000);
+  });
+
+ 
+
+console.log("Zero seconds");
+delay(1).then(() => console.log("1 sec"));
+delay(5).then(() => console.log("5 secs"));
+*/
+
+// promises api
+
+const spacePeople = () => {
+  return new Promise((resolve, reject) => {
+    const api = "http://api.open-notify.org/astros.json";
+    const request = new XMLHttpRequest();
+    request.open("GET", api);
+    request.onload = () => {
+      if (request.status === 200) { 
+        resolve(JSON.parse(request.response));
+      } else {
+        reject(Error(request.statusText));
+      }
+    };
+    request.onerror = err => reject(err);
+    request.send();
+  });
+};
+
+spacePeople().then((spaceData) => 
+  console.log(spaceData)
+);
