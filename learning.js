@@ -459,4 +459,20 @@ console.log(countdown.next().value);
 console.log(countdown.next().value);
 console.log(countdown.next().value);
 console.log(countdown.next().value);
-console.log(countdown.next());
+
+
+// task, format text
+
+
+/*function formatText(text, indentLevel = 1) {
+  return " ".repeat(indentLevel * 2) + text;
+}*/
+
+const text = "Hello, this is great!";
+const indentLevel = 2; 
+
+const formatText = (text, indentLevel = 1) => {
+  return " ".repeat(indentLevel * 2) + text;
+}
+
+console.log(formatText(text, indentLevel));
