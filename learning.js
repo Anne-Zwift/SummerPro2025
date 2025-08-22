@@ -497,7 +497,7 @@ delay(5).then(() => console.log("5 secs"));
 
 // promises api
 
-const spacePeople = () => {
+/*const spacePeople = () => {
   return new Promise((resolve, reject) => {
     const api = "http://api.open-notify.org/astros.json";
     const request = new XMLHttpRequest();
@@ -516,6 +516,65 @@ const spacePeople = () => {
 
 spacePeople()
 .then((spaceData) => console.log(spaceData))
-.catch((err) => console.error(new Error("Can't load people"), err));
+.catch((err) => console.error(new Error("Can't load people"), err));*/
 
-  
+// async/await
+
+/*const delay = (seconds) =>
+  new Promise((resolves) => setTimeout(resolves, seconds * 1000));
+
+const countToFive = async () => {
+  console.log("zero seconds");
+  await delay(1);
+  console.log("one second");
+  await delay(2);
+  console.log("two second");
+  await delay(3);
+  console.log("three second");
+  await delay(4);
+  console.log("four second");
+  await delay(5);
+  console.log("five second");
+}
+countToFive();*/
+
+// async/await with fetch
+// we are waiting to get some data back
+
+const githubRequest = async (login) => {
+  let response = await fetch(`https://api.github.com/users/${login}`);
+  let json = await response.json();
+  let summary = `${json.name}, ${json.company}`;
+  console.log(summary);
+};
+githubRequest("Anne-Zwift");
+
+
+// task
+
+
+const Userid = 42;
+
+
+async function fetchData(id) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        id,
+        timestamp: Date.now(),
+        data: `Data for ID: ${id}`
+      });
+    }, 1000);
+  });
+}
+
+async function showData() {
+  const result = await fetchData(Userid);
+  console.log(result);
+
+  // Convert timestamp to readable date
+  const date = new Date(result.timestamp);
+  console.log(date.toString());
+}
+
+showData();
