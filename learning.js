@@ -100,8 +100,8 @@ console.log("has Oliver Twist", books.has("Oliver Twist"));
 
 // task
 
-const showExpectedResult = false;
-const showHints = false;
+//const showExpectedResult = false;
+//const showHints = false;
 
 const username = "Anne";
 const age = 32;

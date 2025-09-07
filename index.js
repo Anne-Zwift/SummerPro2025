@@ -133,3 +133,10 @@ const rollAllDice = async () => {
 rollDiceBtn?.addEventListener("click", () => {
   rollAllDice();
 });
+
+function addNumbers(a, b) {
+  return a + b;
+}
+
+const sum = addNumbers(10, 10);
+console.log(sum);
